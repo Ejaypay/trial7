@@ -11,9 +11,19 @@ body {
 
 /* Header styling */
 header {
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 20px;
-    text-align: center;
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other content */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center the header content horizontally */
+}
+
+.header-container {
+    text-align: center; /* Center text inside the container */
+    width: 100%; /* Full width of the header */
 }
 
 header h1 {
@@ -28,10 +38,11 @@ header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Center nav items horizontally */
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
@@ -48,47 +59,66 @@ header nav a:hover {
 /* Main section styling */
 section {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     margin: 10px;
     border-radius: 8px;
+    margin-top: 80px; /* Space below the fixed header */
 }
 
-/* Image styling */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Footer styling */
-footer {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+/* Centering image */
+.centered-image {
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+}
+
+.centered-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #fff; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 /* Gallery styling */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
 }
 
 .gallery img {
-    margin: 10px;
-    border: 2px solid #fff; 
-    border-radius: 5px; 
-    width: 200px;
-    height: 150px; 
-    object-fit: cover; 
-    transition: border-color 0.3s; 
+    width: 300px; /* Fixed width for each image */
+    height: 200px; /* Fixed height for each image */
+    object-fit: cover; /* Ensures images cover the dimensions without distortion */
+    border: 2px solid #ff3d0036; /* Semi-transparent border */
+    border-radius: 13px;
+    box-shadow: 4px 7px 7px 0px #00000042; /* Shadow effect */
+    cursor: pointer;
+    transition: transform 400ms, filter 400ms; /* Smooth transition */
+    filter: grayscale(100%); /* Grayscale effect */
 }
 
+.gallery img:hover {
+    transform: scale(1.03); /* Zoom effect on hover */
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center images vertically */
+    }
+
     .gallery img {
         width: 150px;
         height: 100px;
