@@ -1,0 +1,106 @@
+/* Basic reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/6294122jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Header styling */
+header {
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styling */
+section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer styling */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Gallery styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    margin: 10px;
+    border: 2px solid #fff; 
+    border-radius: 5px; 
+    width: 200px;
+    height: 150px; 
+    object-fit: cover; 
+    transition: border-color 0.3s; 
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 150px;
+        height: 100px;
+    }
+
+    header nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
