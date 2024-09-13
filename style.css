@@ -4,9 +4,7 @@ body {
     background-image: url('images/6294122.jpg'); /* Correct path */
     background-size: cover;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    color: #fff;
+    background-repeat: no-repeat;
 }
 
 
