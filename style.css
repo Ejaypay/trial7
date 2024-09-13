@@ -1,30 +1,42 @@
 /* Basic reset and body styling */
 body {
-    font-family: Arial, sans-serif;
-}
-body{
-    background-image: url('images/6294122.jpg'); 
+    font-family: 'Times New Roman', sans-serif;
+    background-image: url('images/6294122.jpg'); /* Ensure the path is correct */
     background-size: cover;
     background-attachment: fixed;
-    background-position: centered;
+    background-position: center;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Set a default font color to white for better contrast */
+}
 
+/* Dark overlay for improved text readability */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    z-index: -1;
 }
 
 /* Header styling */
 header {
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.8); /* Darker background for better text visibility */
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em; /* Increase the size of the main heading */
+    font-size: 2.5em; /* Increased font size for better visibility */
+    color: #ffcc00; /* Bright color for the main heading */
 }
 
 header nav {
-    margin-top: 20px; /* Add some space above the navigation */
+    margin-top: 20px;
 }
 
 header nav ul {
@@ -35,29 +47,29 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin: 0 20px; /* Increase space between navigation items */
+    margin: 0 20px;
 }
 
 header nav a {
-    color: #fff;
+    color: #fff; /* White text color for better contrast */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5em; /* Increase the font size of the navigation links */
-    padding: 10px 20px; /* Increase padding around the links */
+    font-size: 1.5em;
+    padding: 10px 20px;
 }
 
 header nav a:hover {
     text-decoration: underline;
-    color: #ffcc00; /* Optional: Change color on hover for better visibility */
+    color: #ffcc00;
 }
 
 /* Main section styling */
 section {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
     margin: 10px;
     border-radius: 8px;
-    text-align: center; /* Centers the text within the section */
+    text-align: center;
 }
 
 /* Image styling */
@@ -65,15 +77,15 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto; /* Centers the image and adds space above and below */
+    margin: 20px auto;
 }
 
 /* Footer styling */
 footer {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     text-align: center;
-    position: relative; /* Adjust position for better alignment */
+    position: relative;
     width: 100%;
 }
 
@@ -86,16 +98,16 @@ footer {
 
 .gallery img {
     margin: 10px;
-    border: 2px solid #fff; 
-    border-radius: 5px; 
+    border: 2px solid #fff;
+    border-radius: 5px;
     width: 200px;
-    height: 150px; 
-    object-fit: cover; 
-    transition: border-color 0.3s; 
+    height: 150px;
+    object-fit: cover;
+    transition: border-color 0.3s;
 }
 
 .gallery img:hover {
-    border-color: #ffcc00; /* Optional: Add a border color change on hover */
+    border-color: #ffcc00;
 }
 
 /* Responsive design for smaller screens */
@@ -107,12 +119,12 @@ footer {
 
     header nav ul li {
         display: block;
-        margin: 10px 0; /* More spacing for vertical navigation on smaller screens */
+        margin: 10px 0;
     }
 
     header nav a {
-        font-size: 1.2em; /* Adjust font size for smaller screens */
-        padding: 15px; /* Adjust padding for touch-friendly buttons */
+        font-size: 1.2em;
+        padding: 15px;
     }
 
     .gallery img {
