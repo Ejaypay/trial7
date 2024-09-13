@@ -1,58 +1,52 @@
 /* Basic reset and body styling */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/6294122.jpg'); /* Correct path */
+    background-image: url('images/6294122.jpg'); /* Replace with your background image */
     background-size: cover;
     background-attachment: fixed;
+    background-position: centered;
     background-repeat: no-repeat;
-    background-position: center;
-}
 
+}
 
 /* Header styling */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-}
-
-.header-container {
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2em; /* Increase the size of the main heading */
 }
 
 header nav {
-    margin-top: 10px;
+    margin-top: 20px; /* Add some space above the navigation */
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 header nav ul li {
-    margin: 0 10px;
+    display: inline;
+    margin: 0 20px; /* Increase space between navigation items */
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.5em; /* Increase the font size of the navigation links */
+    padding: 10px 20px; /* Increase padding around the links */
 }
 
 header nav a:hover {
     text-decoration: underline;
+    color: #ffcc00; /* Optional: Change color on hover for better visibility */
 }
 
 /* Main section styling */
@@ -61,44 +55,15 @@ section {
     background: rgba(0, 0, 0, 0.5);
     margin: 10px;
     border-radius: 8px;
-    margin-top: 100px;
+    text-align: center; /* Centers the text within the section */
 }
 
-/* Centering image */
-.centered-image {
-    text-align: center;
-}
-
-.centered-image img {
+/* Image styling */
+img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #fff;
-    border-radius: 8px;
-}
-
-/* Gallery styling */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 300px; /* Fixed width for each image */
-    height: 300px; /* Fixed height for each image */
-    object-fit: cover; /* Ensures images cover the dimensions without distortion */
-    border: 2px solid #ff3d0036;
-    border-radius: 13px;
-    box-shadow: 4px 7px 7px 0px #00000042;
-    cursor: pointer;
-    transition: transform 400ms, filter 400ms;
-    filter: grayscale(100%);
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-    filter: grayscale(0);
+    display: block;
+    margin: 20px auto; /* Centers the image and adds space above and below */
 }
 
 /* Footer styling */
@@ -106,23 +71,33 @@ footer {
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     text-align: center;
-    position: relative;
+    position: relative; /* Adjust position for better alignment */
     width: 100%;
-    bottom: 0;
 }
 
-/* Responsive design */
+/* Gallery styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    margin: 10px;
+    border: 2px solid #fff; 
+    border-radius: 5px; 
+    width: 200px;
+    height: 150px; 
+    object-fit: cover; 
+    transition: border-color 0.3s; 
+}
+
+.gallery img:hover {
+    border-color: #ffcc00; /* Optional: Add a border color change on hover */
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery img {
-        width: 150px;
-        height: 150px;
-    }
-
     header nav ul {
         text-align: center;
         padding: 0;
@@ -130,6 +105,16 @@ footer {
 
     header nav ul li {
         display: block;
-        margin: 5px 0;
+        margin: 10px 0; /* More spacing for vertical navigation on smaller screens */
+    }
+
+    header nav a {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for touch-friendly buttons */
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 100px;
     }
 }
