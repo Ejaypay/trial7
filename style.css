@@ -2,6 +2,14 @@
 body {
     font-family: Arial, sans-serif;
 }
+body{
+    background-image: url('images/6294122.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: centered;
+    background-repeat: no-repeat;
+
+}
 
 /* Header styling */
 header {
