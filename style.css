@@ -1,7 +1,7 @@
 /* Basic reset and body styling */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/6294122.jpg'); /* Replace with your background image */
+    background-image: url('c:/Users/PAAT PAAT/Downloads/vacation-island-scenery-palm-trees-digital-art-4k-wallpaper-uhdpaper.com-336@1@m.jpg'); /* Replace with your background image */
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -13,17 +13,7 @@ body {
 header {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 20px;
-    position: fixed; /* Fixed position to keep it at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the header is above other content */
-    display: flex; /* Use Flexbox for alignment */
-    justify-content: center; /* Center the header content horizontally */
-}
-
-.header-container {
-    text-align: center; /* Center text inside the container */
-    width: 100%; /* Full width of the header */
+    text-align: center;
 }
 
 header h1 {
@@ -38,11 +28,10 @@ header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center; /* Center nav items horizontally */
 }
 
 header nav ul li {
+    display: inline;
     margin: 0 10px;
 }
 
@@ -62,19 +51,6 @@ section {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     margin: 10px;
     border-radius: 8px;
-    margin-top: 80px; /* Space below the fixed header */
-}
-
-/* Centering image */
-.centered-image {
-    text-align: center;
-}
-
-.centered-image img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid #fff; /* Optional: Add a border */
-    border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 /* Gallery styling */
