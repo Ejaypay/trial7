@@ -1,12 +1,6 @@
 /* Basic reset and body styling */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/6294122.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: centered;
-    background-repeat: no-repeat;
-
 }
 
 /* Header styling */
